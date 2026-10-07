@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REDSTORE — Noutbuk va kompyuterlar do'koni</title>
+<meta name="description" content="REDSTORE — noutbuk va kompyuterlar do'koni. Gaming, ultrabook, biznes va o'quv noutbuklari. 2 yil kafolat, tez yetkazib berish.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e11d2e'/%3E%3Crect x='14' y='18' width='36' height='22' rx='3' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='M10 46h44' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  /* pre-paint theme to avoid flash */
+  (function () {
+    try {
+      var t = localStorage.getItem("rs-theme");
+      if (!t) t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<!-- ======= NAV ======= -->
+<header class="nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a class="logo" href="#home"><span class="logo-mark">💻</span>RED<b>STORE</b></a>
+      <nav class="nav-links">
+        <a href="#home" class="active" data-i18n="nav_home">Bosh sahifa</a>
+        <a href="#catalog" data-i18n="nav_catalog">Katalog</a>
+        <a href="#features" data-i18n="nav_features">Afzalliklar</a>
+        <a href="#reviews" data-i18n="nav_reviews">Fikrlar</a>
+        <a href="#contact" data-i18n="nav_contact">Aloqa</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="search-box">🔍<input id="search" type="search" data-i18n-ph="search_ph" placeholder="Noutbuk qidirish..."></div>
+        <div class="lang">
+          <button class="icon-btn lang-btn" id="langBtn" aria-label="Language"><span id="langCur">🇺🇿 UZ</span> ▾</button>
+          <div class="lang-menu glass" id="langMenu">
+            <button data-lang="uz" class="sel">🇺🇿 O'zbekcha</button>
+            <button data-lang="ru">🇷🇺 Русский</button>
+            <button data-lang="en">🇬🇧 English</button>
+            <button data-lang="zh">🇨🇳 中文</button>
+          </div>
+        </div>
+        <button class="icon-btn" id="themeBtn" aria-label="Theme">🌙</button>
+        <button class="icon-btn" id="cartBtn" aria-label="Cart">🛒<span class="cart-count" id="cartCount">0</span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ======= HERO ======= -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge-pill" data-i18n="hero_badge">🔥 O'zbekistondagi #1 noutbuk do'koni</span>
+      <h1><span data-i18n="hero_t1">Orzuyingizdagi noutbuk —</span><br><span class="grad" data-i18n="hero_t2">qizil narxda, oq sifatda.</span></h1>
+      <p class="hero-sub" data-i18n="hero_sub">Gaming'dan ultrabook'gacha — 500+ model, 2 yil rasmiy kafolat va Toshkent bo'ylab 24 soatda bepul yetkazib berish.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#catalog" data-i18n="hero_cta_shop">Katalogni ko'rish</a>
+        <a class="btn btn-ghost" href="#deal" data-i18n="hero_cta_deal">Kun taklifi 🔥</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat glass reveal"><b>500+</b><span data-i18n="stat_models">modellar</span></div>
+        <div class="stat glass reveal"><b>12k+</b><span data-i18n="stat_clients">mijozlar</span></div>
+        <div class="stat glass reveal"><b>2 <span style="font-size:14px">yil</span></b><span data-i18n="stat_warranty">kafolat</span></div>
+        <div class="stat glass reveal"><b>4.9★</b><span data-i18n="stat_rating">reyting</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="halo"></div>
+      <img class="hero-img" src="assets/img/hero-laptop.png" alt="REDSTORE flagship laptop">
+      <div class="hero-chip glass c1"><span class="dot"></span>RTX 4070</div>
+      <div class="hero-chip glass c2"><span class="dot"></span>24h delivery</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= BRANDS ======= -->
+<div class="brands">
+  <p data-i18n="brands_title">Rasmiy hamkorlar</p>
+  <div class="marquee"><div class="marquee-track" id="marquee">
+    <span>AS<b>US</b></span><span>LE<b>NOVO</b></span><span>HP</span><span>DE<b>LL</b></span><span>AC<b>ER</b></span><span>M<b>SI</b></span><span>XIA<b>OMI</b></span><span>AP<b>PLE</b></span><span>HU<b>AVEI</b></span>
+    <span>AS<b>US</b></span><span>LE<b>NOVO</b></span><span>HP</span><span>DE<b>LL</b></span><span>AC<b>ER</b></span><span>M<b>SI</b></span><span>XIA<b>OMI</b></span><span>AP<b>PLE</b></span><span>HU<b>AVEI</b></span>
+  </div></div>
+</div>
+
+<!-- ======= CATALOG ======= -->
+<section id="catalog">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="cat_title">Katalog</h2>
+      <p data-i18n="cat_sub">O'zingizga mos noutbukni tanlang</p>
+    </div>
+    <div class="catalog-bar reveal">
+      <div class="chips" id="chips">
+        <button class="chip active" data-cat="all" data-i18n="cat_all">Barchasi</button>
+        <button class="chip" data-cat="gaming" data-i18n="cat_gaming">Gaming</button>
+        <button class="chip" data-cat="ultra" data-i18n="cat_ultra">Ultrabook</button>
+        <button class="chip" data-cat="business" data-i18n="cat_business">Biznes</button>
+        <button class="chip" data-cat="creator" data-i18n="cat_creator">Kreator</button>
+        <button class="chip" data-cat="2in1" data-i18n="cat_2in1">2-in-1</button>
+        <button class="chip" data-cat="student" data-i18n="cat_student">O'quvchilar</button>
+      </div>
+      <div class="sort-box">
+        <span data-i18n="sort_label">Saralash:</span>
+        <select id="sort">
+          <option value="pop" data-i18n="sort_popular">Ommabop</option>
+          <option value="asc" data-i18n="sort_asc">Narx: arzon → qimmat</option>
+          <option value="desc" data-i18n="sort_desc">Narx: qimmat → arzon</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid-products" id="grid"></div>
+  </div>
+</section>
+
+<!-- ======= FEATURES ======= -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="features_title">Nega aynan REDSTORE?</h2>
+      <p data-i18n="features_sub">Minglab mijozlar ishonch sabablarini bilib oling</p>
+    </div>
+    <div class="grid-feats">
+      <div class="feat glass reveal"><div class="ico">🛡️</div><h3 data-i18n="feat1_t">2 yil kafolat</h3><p data-i18n="feat1_d">Har bir qurilmaga rasmiy kafolat va bepul servis xizmati.</p></div>
+      <div class="feat glass reveal"><div class="ico">🚀</div><h3 data-i18n="feat2_t">Tez yetkazib berish</h3><p data-i18n="feat2_d">Toshkentda 24 soatda, viloyatlarga 2–3 kunda yetkazamiz.</p></div>
+      <div class="feat glass reveal"><div class="ico">💳</div><h3 data-i18n="feat3_t">0% bo'lib to'lash</h3><p data-i18n="feat3_d">12 oygacha muddatli to'lov — foizsiz va hujjatsiz.</p></div>
+      <div class="feat glass reveal"><div class="ico">🎧</div><h3 data-i18n="feat4_t">24/7 yordam</h3><p data-i18n="feat4_d">Jonli chat va qo'ng'iroq orqali har doim yoningizdamiz.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= DEAL ======= -->
+<section id="deal">
+  <div class="wrap">
+    <div class="deal glass reveal">
+      <div class="deal-grid">
+        <div class="deal-txt">
+          <span class="badge-pill" data-i18n="deal_badge">Chegirma −30%</span>
+          <h2 data-i18n="deal_title">Kun taklifi</h2>
+          <p data-i18n="deal_sub">Blaze X16 Pro gaming noutbuki — faqat bugun eski narxidan 30% arzon. Ulgurib qoling!</p>
+          <div class="count">
+            <div class="cell glass"><b id="cdD">00</b><span data-i18n="d_days">kun</span></div>
+            <div class="cell glass"><b id="cdH">00</b><span data-i18n="d_hours">soat</span></div>
+            <div class="cell glass"><b id="cdM">00</b><span data-i18n="d_mins">daqiqa</span></div>
+            <div class="cell glass"><b id="cdS">00</b><span data-i18n="d_secs">soniya</span></div>
+          </div>
+          <button class="btn btn-primary" id="dealBtn" data-i18n="deal_cta">Hozir ulgurish</button>
+        </div>
+        <div class="deal-img"><img src="assets/img/lifestyle-desk.png" alt="REDSTORE workspace"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= REVIEWS ======= -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="rev_title">Mijozlar fikri</h2>
+      <p data-i18n="rev_sub">Haqiqiy xaridorlar tajribasi</p>
+    </div>
+    <div class="grid-rev">
+      <div class="rev glass reveal">
+        <div class="stars">★★★★★</div>
+        <p data-i18n="rev1_t">Blaze X16 oldim — yetkazib berish bir kun, narxi bozordan ancha arzon. Zo'r do'kon!</p>
+        <div class="rev-who"><div class="rev-ava">D</div><div><b data-i18n="rev1_n">Dilshod</b><span data-i18n="rev1_r">Dasturchi</span></div></div>
+      </div>
+      <div class="rev glass reveal">
+        <div class="stars">★★★★★</div>
+        <p data-i18n="rev2_t">CreatorPro 16 OLED ekrani ajoyib. Kafolat ham rasmiy — ishonchli do'kon ekan.</p>
+        <div class="rev-who"><div class="rev-ava">M</div><div><b data-i18n="rev2_n">Malika</b><span data-i18n="rev2_r">Dizayner</span></div></div>
+      </div>
+      <div class="rev glass reveal">
+        <div class="stars">★★★★★</div>
+        <p data-i18n="rev3_t">StudyGo 14 ni bo'lib to'lovga oldim: hujjatsiz, tez va qulay. Tavsiya qilaman!</p>
+        <div class="rev-who"><div class="rev-ava">J</div><div><b data-i18n="rev3_n">Jasur</b><span data-i18n="rev3_r">Talaba</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= NEWSLETTER ======= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="news glass reveal">
+      <h2 data-i18n="news_title">Yangiliklardan boxabar bo'ling</h2>
+      <p style="color:var(--muted);margin-top:8px" data-i18n="news_sub">Aksiyalar va yangi modellar haqida birinchi bo'lib biling.</p>
+      <form id="newsForm">
+        <input type="email" required data-i18n-ph="news_ph" placeholder="Email manzilingiz">
+        <button class="btn btn-primary" type="submit" data-i18n="news_btn">Obuna bo'lish</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#home"><span class="logo-mark">💻</span>RED<b>STORE</b></a>
+        <p class="foot-about" data-i18n="foot_about_d">2018 yildan beri noutbuk va kompyuter texnikasining ishonchli do'koni.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot_cat_t">Katalog</h4>
+        <a href="#catalog" data-i18n="cat_gaming">Gaming</a>
+        <a href="#catalog" data-i18n="cat_ultra">Ultrabook</a>
+        <a href="#catalog" data-i18n="cat_business">Biznes</a>
+        <a href="#catalog" data-i18n="cat_student">O'quvchilar</a>
+      </div>
+      <div>
+        <h4 data-i18n="foot_help_t">Yordam</h4>
+        <a href="#" data-i18n="foot_help1">Yetkazib berish</a>
+        <a href="#" data-i18n="foot_help2">Kafolat va servis</a>
+        <a href="#" data-i18n="foot_help3">Qaytarish</a>
+        <a href="#" data-i18n="foot_help4">Bo'lib to'lash</a>
+      </div>
+      <div>
+        <h4 data-i18n="foot_contact_t">Aloqa</h4>
+        <p>📍 Toshkent, Chilonzor-9</p>
+        <p>📞 +998 71 200 70 07</p>
+        <p>✉️ salom@redstore.uz</p>
+        <p>🕘 9:00 — 21:00</p>
+      </div>
+    </div>
+    <div class="foot-bottom" data-i18n="foot_rights">© 2026 REDSTORE. Barcha huquqlar himoyalangan.</div>
+  </div>
+</footer>
+
+<!-- ======= CART DRAWER ======= -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Cart">
+  <div class="drawer-head">
+    <h3 data-i18n="cart_title">Savatcha</h3>
+    <button class="icon-btn" id="drawerClose" aria-label="Close">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="drawer-foot" id="drawerFoot">
+    <div class="total-row"><span data-i18n="cart_total">Jami</span><b id="cartTotal">0</b></div>
+    <button class="btn btn-primary" id="checkoutBtn" data-i18n="cart_checkout">Rasmiylashtirish</button>
+    <button class="cart-clear" id="clearBtn" data-i18n="cart_clear">Tozalash</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
